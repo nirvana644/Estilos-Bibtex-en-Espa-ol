@@ -1401,7 +1401,7 @@ FUNCTION {mastersthesis}
   new.block
   format.title "title" output.check
   new.block
-  "Master's thesis" format.thesis.type output.nonnull
+  "Tesis de maestría" format.thesis.type output.nonnull
   school "school" output.check
   address output
   format.date "year" output.check
