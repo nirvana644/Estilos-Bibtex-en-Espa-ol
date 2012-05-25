@@ -897,10 +897,10 @@ FUNCTION {format.pages}
 
 
 FUNCTION {format.vol.num.pages}
-{ volume field.or.null
+{ "vol. " volume field.or.null *
   number empty$
     'skip$
-    { "\penalty0 (" number * ")" * *
+    { "\penalty0\mbox{} n{\textordmasculine} " number * "" * *
       volume empty$
         { "hay un número pero no un volumen en " cite$ " (aunque este campo es opcional)" * * warning$ }
         'skip$
@@ -911,7 +911,7 @@ FUNCTION {format.vol.num.pages}
     'skip$
     { duplicate$ empty$
         { pop$ format.pages }
-        { ":\penalty0 " * pages collapse.pagerange n.dashify * }
+        { ", " * format.pages * }
       if$
     }
   if$
