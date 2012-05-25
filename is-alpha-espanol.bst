@@ -900,7 +900,7 @@ FUNCTION {format.vol.num.pages}
 { "vol. " volume field.or.null *
   number empty$
     'skip$
-    { "\penalty0\mbox{} n{\textordmasculine} " number * "" * *
+    { "\penalty0\mbox{} n{\textordmasculine} " number * "" * * %para usar \textordmasculine hay que hacer:\usepackage{textcomp}
       volume empty$
         { "hay un número pero no un volumen en " cite$ " (aunque este campo es opcional)" * * warning$ }
         'skip$
